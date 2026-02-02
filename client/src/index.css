@@ -43,32 +43,32 @@
 }
 
 :root {
-  --primary: oklch(0.141 0.005 285.823);
+  --primary: oklch(0.623 0.214 259.815);
   --primary-foreground: oklch(1 0 0);
-  --sidebar-primary: oklch(0.141 0.005 285.823);
+  --sidebar-primary: oklch(0.623 0.214 259.815);
   --sidebar-primary-foreground: oklch(1 0 0);
-  --chart-1: oklch(0.235 0.015 65);
-  --chart-2: oklch(0.141 0.005 285.823);
-  --chart-3: oklch(0.235 0.015 65);
-  --chart-4: oklch(0.141 0.005 285.823);
-  --chart-5: oklch(0.235 0.015 65);
-  --radius: 0.5rem;
+  --chart-1: oklch(0.623 0.214 259.815);
+  --chart-2: oklch(0.623 0.214 259.815);
+  --chart-3: oklch(0.623 0.214 259.815);
+  --chart-4: oklch(0.623 0.214 259.815);
+  --chart-5: oklch(0.623 0.214 259.815);
+  --radius: 0.75rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
+  --foreground: oklch(0.1 0.01 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.235 0.015 65);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.235 0.015 65);
   --secondary: oklch(0.95 0.001 0);
-  --secondary-foreground: oklch(0.235 0.015 65);
+  --secondary-foreground: oklch(0.1 0.01 0);
   --muted: oklch(0.92 0.001 0);
   --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.141 0.005 285.823);
+  --accent: oklch(0.623 0.214 259.815);
   --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
   --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
+  --input: oklch(0.97 0.001 0);
   --ring: oklch(0.623 0.214 259.815);
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.235 0.015 65);
@@ -79,38 +79,38 @@
 }
 
 .dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
+  --primary: oklch(0.623 0.214 259.815);
+  --primary-foreground: oklch(1 0 0);
+  --sidebar-primary: oklch(0.623 0.214 259.815);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --background: oklch(0.08 0.01 0);
+  --foreground: oklch(0.95 0.01 0);
+  --card: oklch(0.12 0.01 0);
+  --card-foreground: oklch(0.95 0.01 0);
+  --popover: oklch(0.12 0.01 0);
+  --popover-foreground: oklch(0.95 0.01 0);
+  --secondary: oklch(0.15 0.01 0);
+  --secondary-foreground: oklch(0.85 0.01 0);
+  --muted: oklch(0.18 0.01 0);
   --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
+  --accent: oklch(0.623 0.214 259.815);
+  --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: oklch(0.985 0 0);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
+  --ring: oklch(0.623 0.214 259.815);
+  --chart-1: oklch(0.623 0.214 259.815);
+  --chart-2: oklch(0.623 0.214 259.815);
+  --chart-3: oklch(0.623 0.214 259.815);
+  --chart-4: oklch(0.623 0.214 259.815);
+  --chart-5: oklch(0.623 0.214 259.815);
+  --sidebar: oklch(0.12 0.01 0);
+  --sidebar-foreground: oklch(0.95 0.01 0);
+  --sidebar-accent: oklch(0.18 0.01 0);
+  --sidebar-accent-foreground: oklch(1 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  --sidebar-ring: oklch(0.623 0.214 259.815);
 }
 
 @layer base {
@@ -134,24 +134,11 @@
 }
 
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
   .container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
+    padding-left: 1rem;
     padding-right: 1rem;
   }
 
@@ -162,77 +149,203 @@
 
   @media (min-width: 640px) {
     .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
   }
 
   @media (min-width: 1024px) {
     .container {
-      padding-left: 2rem; /* 32px - desktop padding */
+      padding-left: 2rem;
       padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
+      max-width: 1280px;
     }
   }
-}
-/* Diário Corinthians - Minimalismo Corporativo Sofisticado */
-.diary-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.5rem;
-}
 
-.diary-divider {
-  width: 2px;
-  height: 100%;
-  background-color: oklch(0.141 0.005 285.823);
-  position: absolute;
-  left: 0;
-  top: 0;
-}
+  /* Diário de Tarefas - Design Criativo Moderno */
+  .diary-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #10B981 0%, #3B82F6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+  }
 
-.task-card {
-  transition: all 300ms ease-out;
-  border-left: 2px solid oklch(0.141 0.005 285.823);
-}
+  .diary-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: var(--muted-foreground);
+    font-weight: 500;
+  }
 
-.task-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
+  /* Categorias com Cores */
+  .category-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 200ms ease-out;
+  }
 
-.task-completed {
-  opacity: 0.6;
-  text-decoration: line-through;
-}
+  .category-badge:hover {
+    transform: scale(1.05);
+  }
 
-@keyframes slideInDown {
-  from {
+  .category-trabalho {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #EF4444;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+  }
+
+  .category-pessoal {
+    background-color: rgba(251, 191, 36, 0.1);
+    color: #FBBF24;
+    border: 1px solid rgba(251, 191, 36, 0.2);
+  }
+
+  .category-projetos {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: #10B981;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+  }
+
+  .category-saude {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: #3B82F6;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+  }
+
+  .category-outro {
+    background-color: rgba(167, 139, 250, 0.1);
+    color: #A78BFA;
+    border: 1px solid rgba(167, 139, 250, 0.2);
+  }
+
+  /* Cartões de Tarefas com Gradiente */
+  .task-card {
+    transition: all 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .task-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #10B981 0%, #3B82F6 100%);
     opacity: 0;
-    transform: translateY(-10px);
+    transition: opacity 300ms ease-out;
   }
-  to {
+
+  .task-card:hover {
+    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .task-card:hover::before {
     opacity: 1;
-    transform: translateY(0);
   }
-}
 
-@keyframes slideOutRight {
-  from {
-    opacity: 1;
-    transform: translateX(0);
+  .task-completed {
+    opacity: 0.5;
+    text-decoration: line-through;
   }
-  to {
-    opacity: 0;
-    transform: translateX(20px);
+
+  /* Barra de Progresso */
+  .progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: var(--muted);
+    border-radius: 9999px;
+    overflow: hidden;
+    margin: 1rem 0;
   }
-}
 
-.task-enter {
-  animation: slideInDown 400ms ease-out;
-}
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #10B981 0%, #3B82F6 100%);
+    border-radius: 9999px;
+    transition: width 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
 
-.task-exit {
-  animation: slideOutRight 400ms ease-out;
+  /* Animações Sofisticadas */
+  @keyframes slideInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideOutRight {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+  }
+
+  .task-enter {
+    animation: slideInDown 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .task-exit {
+    animation: slideOutRight 400ms ease-out;
+  }
+
+  /* Busca em Tempo Real */
+  .search-input {
+    background-color: var(--input);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    transition: all 200ms ease-out;
+  }
+
+  .search-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+
+  /* Filtros */
+  .filter-button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--border);
+    background-color: var(--background);
+    color: var(--foreground);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 200ms ease-out;
+  }
+
+  .filter-button:hover,
+  .filter-button.active {
+    background-color: var(--accent);
+    color: var(--accent-foreground);
+    border-color: var(--accent);
+  }
+
+  /* Tema Escuro - Transição Suave */
+  body {
+    transition: background-color 300ms ease-out, color 300ms ease-out;
+  }
 }
