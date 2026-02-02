@@ -43,28 +43,28 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
+  --primary: oklch(0.141 0.005 285.823);
+  --primary-foreground: oklch(1 0 0);
+  --sidebar-primary: oklch(0.141 0.005 285.823);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --chart-1: oklch(0.235 0.015 65);
+  --chart-2: oklch(0.141 0.005 285.823);
+  --chart-3: oklch(0.235 0.015 65);
+  --chart-4: oklch(0.141 0.005 285.823);
+  --chart-5: oklch(0.235 0.015 65);
+  --radius: 0.5rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.235 0.015 65);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.235 0.015 65);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
+  --secondary: oklch(0.95 0.001 0);
+  --secondary-foreground: oklch(0.235 0.015 65);
+  --muted: oklch(0.92 0.001 0);
   --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
+  --accent: oklch(0.141 0.005 285.823);
+  --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
   --border: oklch(0.92 0.004 286.32);
@@ -174,4 +174,65 @@
       max-width: 1280px; /* Standard content width */
     }
   }
+}
+/* Diário Corinthians - Minimalismo Corporativo Sofisticado */
+.diary-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.diary-divider {
+  width: 2px;
+  height: 100%;
+  background-color: oklch(0.141 0.005 285.823);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.task-card {
+  transition: all 300ms ease-out;
+  border-left: 2px solid oklch(0.141 0.005 285.823);
+}
+
+.task-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.task-completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+
+.task-enter {
+  animation: slideInDown 400ms ease-out;
+}
+
+.task-exit {
+  animation: slideOutRight 400ms ease-out;
 }
