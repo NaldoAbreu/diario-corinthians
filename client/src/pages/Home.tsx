@@ -6,6 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Trash2, Download, RotateCcw, CheckCircle2, Circle, Search, Moon, Sun, Filter } from 'lucide-react';
 import { toast } from 'sonner';
 import { useTheme } from '@/contexts/ThemeContext';
+import jsPDF from 'jspdf';
 
 type Category = 'trabalho' | 'pessoal' | 'projetos' | 'saude' | 'outro';
 type Priority = 'baixa' | 'media' | 'alta';
@@ -103,17 +104,92 @@ export default function Home() {
       return;
     }
 
-    const dataStr = JSON.stringify(tasks, null, 2);
-    const dataBlob = new Blob([dataStr], { type: 'application/json' });
-    const url = URL.createObjectURL(dataBlob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `diario-tarefas-${currentMonth}.json`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
-    toast.success('Dados exportados com sucesso');
+    try {
+      // Criar documento PDF
+      const doc = new jsPDF();
+      const pageWidth = doc.internal.pageSize.getWidth();
+      const pageHeight = doc.internal.pageSize.getHeight();
+      let yPosition = 20;
+      const margin = 15;
+      const maxWidth = pageWidth - 2 * margin;
+      const lineHeight = 7;
+
+      // Título
+      doc.setFontSize(20);
+      doc.setFont(undefined, 'bold' as any);
+      doc.text('Diário de Tarefas', margin, yPosition);
+      yPosition += 10;
+
+      // Data do período
+      doc.setFontSize(12);
+      doc.setFont(undefined, 'normal' as any);
+      const monthName = new Date(`${currentMonth}-01`).toLocaleDateString('pt-BR', {
+        month: 'long',
+        year: 'numeric',
+      });
+      doc.text(`Período: ${monthName}`, margin as number, yPosition as number);
+      yPosition += 8;
+
+      // Resumo
+      const completedCount = tasks.filter(t => t.completed).length;
+      doc.setFontSize(10);
+      doc.text(`Total de tarefas: ${tasks.length}`, margin, yPosition);
+      yPosition += 6;
+      doc.text(`Concluídas: ${completedCount}`, margin, yPosition);
+      yPosition += 6;
+      doc.text(`Pendentes: ${tasks.length - completedCount}`, margin, yPosition);
+      yPosition += 12;
+
+      // Separador
+      doc.setDrawColor(200);
+      doc.line(margin, yPosition - 2, pageWidth - margin, yPosition - 2);
+
+      // Tarefas
+      doc.setFontSize(10);
+      tasks.forEach((task, index) => {
+        // Verificar se precisa de nova página
+        if (yPosition > pageHeight - 30) {
+          doc.addPage();
+          yPosition = 20;
+        }
+
+        // Número da tarefa
+        doc.setFont(undefined, 'bold' as any);
+        doc.text(`${index + 1}. ${task.title}`, margin as number, yPosition as number);
+        yPosition += 6;
+
+        // Detalhes
+        doc.setFont(undefined, 'normal' as any);
+        doc.setFontSize(9);
+        
+        const categoryLabel = CATEGORIES.find(c => c.value === task.category)?.label || task.category;
+        const priorityLabel = PRIORITIES.find(p => p.value === task.priority)?.label || task.priority;
+        const statusLabel = task.completed ? '✓ Concluída' : '○ Pendente';
+        
+        doc.text(`Categoria: ${categoryLabel} | Prioridade: ${priorityLabel} | Status: ${statusLabel}`, (margin + 5) as number, yPosition as number);
+        yPosition += 6;
+
+        const dateStr = new Date(task.createdAt).toLocaleDateString('pt-BR');
+        doc.text(`Data: ${dateStr}`, margin + 5, yPosition);
+        yPosition += 10;
+      });
+
+      // Rodapé
+      doc.setFontSize(8);
+      doc.setFont(undefined, 'italic' as any);
+      doc.text(
+        `Exportado em ${new Date().toLocaleDateString('pt-BR')} às ${new Date().toLocaleTimeString('pt-BR')}`,
+        margin as number,
+        (pageHeight - 10) as number
+      );
+
+      // Salvar PDF
+      doc.save(`diario-tarefas-${currentMonth}.pdf`);
+      toast.success('PDF exportado com sucesso');
+    } catch (error) {
+      console.error('Erro ao exportar PDF:', error);
+      toast.error('Erro ao exportar PDF');
+    }
   };
 
   const clearMonth = () => {
